@@ -1,0 +1,29 @@
+import React from 'react';
+import useSWR from 'swr';
+
+
+
+// Define the fetcher function for SWR
+const fetcher = (url) => fetch(url).then((res) => res.json());
+
+var playerIDS=[];
+const GetIds = () => {
+    const { data, error } = useSWR(`https://api.opendota.com/api/matches/7900369857`, fetcher);
+
+    if (error) return <div>Error loading match details.</div>;
+    if (!data) return <div>Loading match details...</div>;
+  
+    // Find the player by playerId
+    data.players.forEach(player => {
+      playerIDS.push(player.hero_id)
+    });
+    console.log(playerIDS);
+    return(
+        playerIDS
+    );
+}
+
+
+
+
+export default GetIds;

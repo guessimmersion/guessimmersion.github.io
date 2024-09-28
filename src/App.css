@@ -1,38 +1,150 @@
 .App {
   text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.App{
+  border: 0px;
+  background-color: rgb(25, 25, 34);
+  height: 100vh;
+  width: 100vw;
   color: white;
 }
+.item{
+  width: 88px;
+  height: 64px;
+ 
+  display: inline-block;
+  background-size: cover;
+  background-color: rgb(35, 5, 5);
+  margin-top: 4.4px;
+  margin-bottom: 4.4x;
 
-.App-link {
-  color: #61dafb;
+  
+}
+button{
+  border: none;
+}
+div{
+  background-color: rgb(25, 25, 34);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.backitem{
+  width: 88px;
+  height: 64px;
+
+  display: inline-block;
+  background-color: rgb(35, 5, 5);
+  background-size: cover;
+  filter: grayscale();
+  margin-top: 4.4px;
+  margin-bottom: 4.4px;
+
+}
+.hero{
+  width: 128px;
+  height: 72px;
+
+  display: inline-block;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-left: 12.8px;
+  margin-right: 12.8px;
+  margin-top:7.2px;
+  margin-bottom: 7.2px;
+  filter: grayscale();
+}
+button{
+  display: flex;
+  margin: auto;
+
+}
+#items{
+  height: 128px;
+  width: 88px;
+  display: block;
+}
+#backitems{
+  display: inline;
+  height: 64px;
+  width: 88px;
+}
+#play,#conf,.over{
+  display: flex;
+  min-width:250px ;
+  min-height: 125px;
+  background-color: rgb(154, 31, 31);
+  align-items: center;
+  justify-content: center; 
+  color: white;
+  font-size: x-large;
+  border-radius: 15px;
+}
+#conf,.hero{
+  min-width: 128px;
+  min-height: 72px;
+  border-radius: 10px;
+}
+.over{
+  display: inline-block;
+  min-height: 50px;
+  min-width: 100px;
+  border-radius: 10px;
+  font-size: large;
+
+}
+a{
+  display: block;
+  color: rgb(164,26,26);
+}
+.item,.backitem{
+  border-radius: 10px;
+}
+#home{
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(25, 25, 34);
+  
+   
+    
+}
+.items{
+  width: 264px;
+  height: 192px;
+}
+
+@media screen and (orientation:portrait) { 
+  #heroes{
+    max-width: 768px;
+    max-height: 172,2px;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media screen and (orientation:landscape) {
+  #heroes{
+    width: 768px;
+    height: 172,2px;
   }
+}
+.items,#heroes{
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.hero.selected {
+  transform: scale(1.2); /* Enlarge the button */
+  z-index: 1; /* Bring it to the front */
+  filter: none;
+}
+#over{
+  margin: 0px;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(25, 25, 34);
+  color: white;
 }
